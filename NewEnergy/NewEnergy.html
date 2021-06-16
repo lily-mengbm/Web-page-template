@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device一width, initial一scale=1.0, maximum一scale=1.0,user一scalable=0" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"> </script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+  <title>New energy</title>
+  <style>
+    .bg{
+      position: relative;
+      display: flex;
+    }
+    .content_left {
+      flex: 1
+     }
+    /* logo */
+    .bg_logo {
+      position: fixed;
+      top: 5vh;
+      left: 5vh;
+      width: 7vh;
+      z-index: 99;
+    }
+    /* 菜单按钮 */
+    .bg_menu {
+      position: fixed;
+      top: 5vh;
+      right: 5vh;
+      width: 5vh;
+      z-index: 99;
+    }
+    /* 标题公共样式*/
+    .title {
+      position: absolute;
+      left: 10%;
+      z-index: 99;
+    }
+    /* 第一段标题 */
+    .title_h1 {
+      top: 30%;
+      color: rgb(245,170,71);
+    }
+    /* 第二段标题 */
+    .title_h2 {
+      top: 32%;
+      color: white;
+      font-size: 50px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 30px;
+    }
+    .title_h3{
+      position: absolute;
+      top: 38%;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .title_btn {
+      width: 8rem;
+      height: 2rem;
+      top: 45%;
+      border: 1px solid rgb(207,139,50);
+      border-radius: 10%;
+      background-color: rgb(207,139,50);
+      color: white;
+      font-weight: bold;
+    }
+    /* 第四段标题*/
+    .title_h4{
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      color: white;
+      font-size: 14px;
+    }
+    /* 第五段标题*/
+    .title_h5{
+      position: absolute;
+      top: 53%;
+      left: 10%;
+      color: white;
+      font-size: 14px;
+    }
+    .title_h6{
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .content_left {
+      flex: 1
+    }
+    .content_right {
+      flex: 1;
+      position: absolute;
+      right: 0;
+      top: 20%;
+      background: url("right_bg.png");
+      width: 10rem;
+      height: 20rem;
+      opacity: 0.5;
+      text-align: center;
+      color: white;
+      z-index: 1;
+    }
+    .content_right > span {
+      margin-top: 5rem;
+    }
+    .content_center {
+      flex: 1;
+      position: absolute;
+      right: 10rem;
+      top: 20%;
+      z-index: 99
+    }
+    .content_center span {
+      -webkit-writing-mode: vertical-rl;
+      writing-mode: vertical-rl;
+    }
+
+    .content_wrap {
+      display: flex;
+    }
+    .switchBg {
+      margin-top: 8rem;
+      z-index: 2;
+      position: absolute;
+      right: 5%;
+      top: 20%;
+      color: white;
+    }
+    .swiper-slide > img {
+      width: 100%;
+      height: 40rem;
+      background-size: 100% 100%;
+    }
+
+  </style>
+  <script>
+    window.onload = function() {
+      const mySwiper = new Swiper ('.swiper-container', {
+        autoplay:true,
+        direction: 'horizontal', // 水平切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      })
+    }
+
+  </script>
+</head>
+<body>
+  <div class="bg">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="bg1.jpg"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="bg2.jpg"/></div>
+        <div class="swiper-slide">
+          <img src="energy.jpg"/></div>
+      </div>
+
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    <img class="bg_menu" src="menu.png"/>
+    <img class="bg_logo" src="logo.png"/>
+    <div class="content_wrap">
+      <div class="content_left">
+        <div class="title_h1 title">NEW ENERGY</div>
+        <span class="title_h2 title">探索能源创新之路</span>
+        <div class="title_h3 title">TAKE THE ROAD TO DEVELOPMENT</div>
+        <button class="title_btn title">Read More</button>
+        <div class="title_h4 title">为社会节约能源资源，加强环境保护</div>
+        <div class="title_h5 title">Strengthening environmental protection</div>
+      </div>
+      <div class="content_center">
+        <span class="title_h1">EW ENERGY SCIENCE AND TECHNOLOGY</span>
+        <span class="title_h6">感受新能源给生活带来的便利</span>
+      </div>
+      <div class="content_right">
+      </div>
+      <div class="switchBg">
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  </div>
+</body>
+</html>
